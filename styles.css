@@ -1,5 +1,7 @@
 :root {
-  --tempbg: #aeaeae;  
+  --tempbg: #aeaeae;
+  --wrapperbg: #eaeaea;
+  --border: #343;
 }
 
 *, *::before, *::after {
@@ -13,4 +15,59 @@ body {
   background-color: var(--tempbg);
   /* background prop with image goes here */
   font-size: 1rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+}
+
+.wrapper {
+  width: 70%;
+  max-width: 750px;
+  min-width: 300px;
+  background-color: var(--wrapperbg);
+  padding: 1.3rem;
+  border-radius: 7px;
+  border: 2px dotted var(--border);
+}
+
+.heading {
+  font-size: 1.7rem;  
+  margin-bottom: 1.5rem;
+  text-align: center;
+  text-decoration: wavy;
+}
+
+.QA {
+  margin-bottom: 0.9rem;
+}
+
+.question {
+  font-size: 1.3rem;
+  /* refresh stuff about font-weight */
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 0.75px solid var(--tempbg);
+  /* styling for the + sign */
+  position: relative;
+}
+
+/* using pseudo-selector to create the + sign */
+.question::after {
+  position: absolute;
+  right: 1rem;
+  content: '+';
+  cursor: pointer;
+}
+
+.answer {  
+  font-size: 1.1rem;
+  line-height: 1.2;
+  /* technique for hiding content by default */
+  height: 0;
+  overflow: hidden;
+  /* using transiton for smooth apperance of the answer */
+  transition: .5s;
 }
