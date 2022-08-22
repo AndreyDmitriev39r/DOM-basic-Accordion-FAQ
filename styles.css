@@ -1,3 +1,5 @@
+/* TO DO add hover stuff to the plus button
+cursor pointer to the whole question would be better */
 :root {
   --tempbg: #aeaeae;
   --wrapperbg: #eaeaea;
@@ -75,8 +77,9 @@ body {
 /* styles for dynamically added classes */
 
 .QA.active .question {
+  /* TO DO play around values of transition */
   transition: .5s;
-  font-size: 0.85rem;
+  font-size: 1rem;
 }
 
 .QA.active .answer {
