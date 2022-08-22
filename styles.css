@@ -62,7 +62,7 @@ body {
   cursor: pointer;
 }
 
-.answer {  
+.answer {
   font-size: 1.1rem;
   line-height: 1.2;
   /* technique for hiding content by default */
@@ -70,4 +70,15 @@ body {
   overflow: hidden;
   /* using transiton for smooth apperance of the answer */
   transition: .5s;
+}
+
+/* styles for dynamically added classes */
+
+.QA.active .question {
+  transition: .5s;
+  font-size: 0.85rem;
+}
+
+.QA.active .answer {
+  height: unset;
 }
